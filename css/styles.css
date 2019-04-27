@@ -30,111 +30,101 @@ html {
 
 body {
   position: relative;
-  max-width: 900px;
-  margin: auto;
   color: var(--main-font-color);
 }
 /* END: Default values */
 
-/* Header */
-.header {
-  position: relative;
-  width: 100%;
-  min-height: 400px;
-  background: url(../img/Stadium_Panorama.jpg) no-repeat;
-  background-size: cover;
-}
-/* END: Header */
-
-/* Main Nav */
-.main-nav {
-  position: fixed;
-  width: 100%;
-  max-width: 900px;
-  height: 60px;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 99;
+.padding-0 {
+  padding-right: 0;
+  padding-left: 0;
 }
 
-.main-nav__list {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+.navbar {
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 8px 6px -6px var(--dark);
 }
 
-.main-nav__sub-list {
-  position: absolute;
-  left: 65px;
-  padding-top: 19px;
-  width: 150px;
-  max-height: 0;
-  transition: max-height 0.9s;
-  overflow: hidden;
+.navbar-nav {
+  height: 100%;
 }
 
-.main-nav__sub-list-item {
-  background: rgba(0, 0, 0, 0.6);
-  list-style-type: none;
-  padding: 5px;
-}
-
-.main-nav__sub-list-item:last-child {
-  padding-bottom: 10px;
-}
-
-.main-nav__list-item {
-  color: var(--light-font-color);
-  list-style-type: none;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.main-nav__list-item:hover .main-nav__sub-list {
-  max-height: 150px;
-}
-
-.main-nav__logo {
+.navbar-logo {
   position: absolute;
   right: 40px;
   top: 10px;
   animation: showlogo 1.1s;
   animation-timing-function: ease-in-out;
 }
+
+.navbar-logo img {
+  width: 80px;
+}
+@media (max-width: 767.98px) {
+  .navbar-logo img {
+    width: 60px;
+  }
+}
+
 @keyframes showlogo {
   from {
-    top: -110px;
+    top: -85px;
   }
   to {
     top: 10px;
   }
 }
 
-.main-nav__link {
-  color: var(--light-font-color);
-  font-size: 1rem;
-  text-decoration: none;
+.nav-link,
+.nav-link:hover {
+  color: var(--white);
+}
+.nav-link:hover {
+  color: var(--white);
 }
 
-.main-nav__link:hover {
-  padding-bottom: 5px;
-  border-bottom: 2px solid var(--accent);
+/* Bootstrap DropDown styling */
+.dropdown-toggle::after {
+  display: none;
 }
-/* END: Main Nav */
 
-/* Section */
-.section {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 40px;
-  background: var(--light-bg-color);
+.dropdown-menu {
+  margin-top: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.65);
 }
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.dropdown-menu.fade {
+  display: block;
+  max-height: 0;
+  opacity: 1;
+  pointer-events: none;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu.fade {
+  max-height: 150px;
+  pointer-events: auto;
+}
+
+/* END: Bootstrap DropDown styling */
 
 .section--dark {
   background: var(--dark-bg-color);
 }
 
-.section--centered {
-  text-align: center;
+/* Section styling */
+.section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  background: var(--light-bg-color);
 }
 
 .section__header {
@@ -153,21 +143,26 @@ body {
 .section__paragraph {
   margin-bottom: 5px;
 }
-/* END: Section */
+
+.section--centered {
+  text-align: center;
+}
+/* END: Section stylign */
 
 /* Score Composition */
-.score {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
 .score__team-logo {
-  display: inline-block;
   width: 100px;
   height: 100px;
   margin: 0px 18px;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 767.98px) {
+  .score__team-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .score__team-logo:hover {
   transform: scale3d(1.1, 1.1, 1);
 }
@@ -177,10 +172,16 @@ body {
 }
 
 .score__score {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   color: var(--dark-font-color);
 }
+@media (max-width: 767.98px) {
+  .score__score {
+    font-size: 2rem;
+  }
+}
+
 /* END: Score Composition */
 
 /* Footer */
@@ -189,65 +190,3 @@ body {
   padding: 40px 0;
 }
 /* END: Footer */
-
-/* Sponsors Composition */
-.sponsors {
-  text-align: center;
-  margin-bottom: 25px;
-}
-.sponsors__item {
-  margin: 0 10px 0 10px;
-  display: inline-block;
-}
-.sponsors__img {
-  width: 100px;
-}
-/* END: Sponsors Composition*/
-
-/* Footer Nav */
-.footer-nav {
-  width: 100%;
-  height: 60px;
-  text-align: center;
-}
-
-.footer-nav__list {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.footer-nav__list-item {
-  color: var(--light-font-color);
-  list-style-type: none;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.footer-nav__link {
-  color: var(--light-font-color);
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-.footer-nav__link:hover {
-  padding-bottom: 5px;
-  border-bottom: 2px solid var(--accent);
-}
-/* END: Footer Nav */
-
-/* Contact container */
-
-.contact-container {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 50px;
-}
-
-.contact__item {
-  list-style-type: none;
-  text-align: left;
-}
-.mapouter {
-  display: inline-block;
-}
