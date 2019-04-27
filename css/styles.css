@@ -1,0 +1,253 @@
+/* Removing default margins */
+* {
+  margin: 0;
+}
+/* END: Removing default margins */
+
+/* Declaring global-scope CSS variables */
+:root {
+  --main-font: "Lato", sans-serif;
+
+  --accent: #8d3938;
+
+  --light-bg-color: #fafafa;
+  --dark-bg-color: #f6f6f6;
+  --darker-bg-color: #666666;
+
+  --main-font-color: #545454;
+  --light-font-color: #fff;
+  --dark-font-color: #292929;
+}
+/* END: Declaring global-scope CSS variables */
+
+/* Default values */
+html {
+  font-size: 15px;
+  line-height: 1.45;
+  font-family: var(--main-font);
+  font-weight: 400;
+}
+
+body {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  color: var(--main-font-color);
+}
+/* END: Default values */
+
+/* Header */
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background: url(../img/Stadium_Panorama.jpg) no-repeat;
+  background-size: cover;
+}
+/* END: Header */
+
+/* Main Nav */
+.main-nav {
+  position: fixed;
+  width: 100%;
+  max-width: 900px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+}
+
+.main-nav__list {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-nav__sub-list {
+  position: absolute;
+  left: 65px;
+  padding-top: 19px;
+  width: 150px;
+  max-height: 0;
+  transition: max-height 0.9s;
+  overflow: hidden;
+}
+
+.main-nav__sub-list-item {
+  background: rgba(0, 0, 0, 0.6);
+  list-style-type: none;
+  padding: 5px;
+}
+
+.main-nav__sub-list-item:last-child {
+  padding-bottom: 10px;
+}
+
+.main-nav__list-item {
+  color: var(--light-font-color);
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.main-nav__list-item:hover .main-nav__sub-list {
+  max-height: 150px;
+}
+
+.main-nav__logo {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  animation: showlogo 1.1s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes showlogo {
+  from {
+    top: -110px;
+  }
+  to {
+    top: 10px;
+  }
+}
+
+.main-nav__link {
+  color: var(--light-font-color);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.main-nav__link:hover {
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--accent);
+}
+/* END: Main Nav */
+
+/* Section */
+.section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  background: var(--light-bg-color);
+}
+
+.section--dark {
+  background: var(--dark-bg-color);
+}
+
+.section--centered {
+  text-align: center;
+}
+
+.section__header {
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-font-color);
+}
+
+.section__sub-header {
+  font-size: 1.1rem;
+  margin: 15px 0 15px 0;
+}
+
+.section__paragraph {
+  margin-bottom: 5px;
+}
+/* END: Section */
+
+/* Score Composition */
+.score {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.score__team-logo {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 0px 18px;
+  transition: all 0.3s ease-in-out;
+}
+.score__team-logo:hover {
+  transform: scale3d(1.1, 1.1, 1);
+}
+
+.score__info {
+  display: inline-block;
+}
+
+.score__score {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--dark-font-color);
+}
+/* END: Score Composition */
+
+/* Footer */
+.footer {
+  background: var(--darker-bg-color);
+  padding: 40px 0;
+}
+/* END: Footer */
+
+/* Sponsors Composition */
+.sponsors {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.sponsors__item {
+  margin: 0 10px 0 10px;
+  display: inline-block;
+}
+.sponsors__img {
+  width: 100px;
+}
+/* END: Sponsors Composition*/
+
+/* Footer Nav */
+.footer-nav {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+
+.footer-nav__list {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer-nav__list-item {
+  color: var(--light-font-color);
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-nav__link {
+  color: var(--light-font-color);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.footer-nav__link:hover {
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--accent);
+}
+/* END: Footer Nav */
+
+/* Contact container */
+
+.contact-container {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 50px;
+}
+
+.contact__item {
+  list-style-type: none;
+  text-align: left;
+}
+.mapouter {
+  display: inline-block;
+}
