@@ -190,3 +190,127 @@ body {
   padding: 40px 0;
 }
 /* END: Footer */
+
+/* Contact container */
+
+.contact {
+  padding-inline-start: 0;
+}
+.contact__item {
+  list-style-type: none;
+  text-align: left;
+}
+
+/* END: Contact container */
+
+/* Fans Comments */
+.comments__item {
+  max-width: 600px;
+}
+
+.comments__form {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* END: Fans Comments */
+
+/* NEWS CARDS */
+
+.card-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.card-img-wrap:after {
+  content: "";
+  position: absolute;
+}
+.card-img-wrap img {
+  transition: transform 0.25s;
+  width: 100%;
+}
+.card-img-wrap:hover img {
+  transform: scale(1.2);
+}
+
+/* END: NEWS CARDS */
+
+/* NEWS FORM */
+
+.news__form {
+  width: 100%;
+  max-width: 600px;
+}
+
+.img-preview {
+  width: 100%;
+  height: 200px;
+  max-width: 600px;
+  background: url(http://via.placeholder.com/600x200) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* END: NEWS FORM */
+
+/* MARQUEE News Line */
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.marquee {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee * {
+  display: inline-block;
+  padding-left: 100%;
+  -webkit-animation: scroll 21s infinite linear;
+  animation: scroll 21s infinite linear;
+}
+.marquee *:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* END: MARQUEE News Line */
+
+.kv-avatar .krajee-default.file-preview-frame,
+.kv-avatar .krajee-default.file-preview-frame:hover {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+.kv-avatar {
+  display: inline-block;
+}
+.kv-avatar .file-input {
+  display: table-cell;
+  width: 213px;
+}
+.kv-reqd {
+  color: red;
+  font-family: monospace;
+  font-weight: normal;
+}

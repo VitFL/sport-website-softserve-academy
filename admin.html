@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Фан-сайт футбольного клубу Львів</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/slate/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="container bg-light padding-0">
+      <header
+        class="container padding-0"
+        style="background: url(img/Stadium_Panorama.jpg) no-repeat;
+      background-size: cover; min-height: 400px;"
+      >
+        <div class="container p-0 fixed-top">
+          <nav class="navbar navbar-expand-md">
+            <button
+              class="navbar-toggler navbar-dark"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+              aria-controls="navbarCollapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto mt-0 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Головна</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbardrop"
+                    data-toggle="dropdown"
+                  >
+                    Матчі
+                  </a>
+                  <div class="dropdown-menu fade">
+                    <a class="dropdown-item nav-link" href="#">Календар ігор</a>
+                    <a class="dropdown-item nav-link" href="#"
+                      >Наступний матч</a
+                    >
+                    <a class="dropdown-item nav-link" href="#">Таблиця</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="news.html">Новини</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="fans.html">Фани</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Контакти</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="admin.html">Admin</a>
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-logo">
+              <a href="index.html">
+                <img src="img/logo_fc_Lviv.png" alt="FC Lviv Logo" />
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section class="container section section--dark">
+        <h1 class="section__header">Додати новину</h1>
+        <form>
+          <div class="container d-flex flex-column news__form">
+            <div class="form-group">
+              <div class="img-preview"></div>
+              <input id="news-image-upload" type="file" />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control form-control"
+                id="news-name"
+                placeholder="Заголовок..."
+              />
+            </div>
+            <div class="form-group text-center align-self-stretch">
+              <textarea
+                class="form-control form-control mb-2"
+                id="news-text"
+                placeholder="Текст новини..."
+                rows="9"
+              ></textarea>
+            </div>
+            <div class="form-group text-center mt-auto p-2">
+              <button type="submit" class="btn btn-primary btn mb-2">
+                Зберегти
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section>
+        <div class="marquee bg-dark">
+          <span class="text-white"
+            >27/04/2019 Ліпе: «Сфокусований на тому, щоб «львів» вдало завершив
+            сезон» &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24/04/2019
+            Олександр Грицай: «Другий тайм вийшов зовсім іншим, на відміну від
+            першого»</span
+          >
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container mb-4">
+          <div class="row">
+            <div class="col-md-3 col-6 mb-3 text-center">
+              <img src="img/sponsor1.png" alt="Sponsor 1" />
+            </div>
+            <div class="col-md-3 col-6 mb-3 text-center">
+              <img src="img/sponsor2.png" alt="Sponsor 2" />
+            </div>
+            <div class="col-md-3 col-6 mb-3 text-center">
+              <img src="img/sponsor3.png" alt="Sponsor 3" />
+            </div>
+            <div class="col-md-3 col-6 mb-3 text-center">
+              <img src="img/sponsor4.png" alt="Sponsor 4" />
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-white">Фан-сайт ПФК Львів, 2019</p>
+      </footer>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
