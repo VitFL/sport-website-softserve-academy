@@ -203,18 +203,6 @@ body {
 
 /* END: Contact container */
 
-/* Fans Comments */
-.comments__item {
-  max-width: 600px;
-}
-
-.comments__form {
-  width: 100%;
-  max-width: 300px;
-}
-
-/* END: Fans Comments */
-
 /* NEWS CARDS */
 
 .card-img-wrap {
