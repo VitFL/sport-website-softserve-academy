@@ -223,24 +223,6 @@ body {
 
 /* END: NEWS CARDS */
 
-/* NEWS FORM */
-
-.news__form {
-  width: 100%;
-  max-width: 600px;
-}
-
-.img-preview {
-  width: 100%;
-  height: 200px;
-  max-width: 600px;
-  background: url(http://via.placeholder.com/600x200) no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-/* END: NEWS FORM */
-
 /* MARQUEE News Line */
 
 @-webkit-keyframes scroll {
