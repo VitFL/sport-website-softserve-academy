@@ -83,45 +83,6 @@
         <h1 class="section__header">Звернення фанів</h1>
         <div class="row mb-4">
           <div id="comments" class="col-12 col-md-8 offset-md-2">
-            <div class="mb-4">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis fugiat ratione et quidem consequuntur doloribus,
-                distinctio illum provident, molestias perspiciatis dignissimos
-                voluptate eum omnis nesciunt adipisci voluptatem, laudantium
-                consequatur. Mollitia.
-              </p>
-              <div class="d-flex justify-content-between">
-                <span>04.05.2019, 15:32:15</span
-                ><strong>FootballFan2000</strong>
-              </div>
-            </div>
-            <div class="mb-4">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis fugiat ratione et quidem consequuntur doloribus,
-                distinctio illum provident, molestias perspiciatis dignissimos
-                voluptate eum omnis nesciunt adipisci voluptatem, laudantium
-                consequatur. Mollitia.
-              </p>
-              <div class="d-flex justify-content-between">
-                <span>04.05.2019, 15:32:15</span
-                ><strong>FootballFan2001</strong>
-              </div>
-            </div>
-            <div class="mb-4">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corporis fugiat ratione et quidem consequuntur doloribus,
-                distinctio illum provident, molestias perspiciatis dignissimos
-                voluptate eum omnis nesciunt adipisci voluptatem, laudantium
-                consequatur. Mollitia.
-              </p>
-              <div class="d-flex justify-content-between">
-                <span>04.05.2019, 15:32:15</span
-                ><strong>FootballFan2002</strong>
-              </div>
-            </div>
           </div>
         </div>
         <div class="row">
@@ -139,10 +100,12 @@
                 >
                 <input
                   type="text"
-                  maxlength="20"
                   class="form-control"
                   name="userName"
                   id="userName"
+                  maxlength="15"
+                  minlength="1"
+                  pattern="^[a-zA-Z0-9]+(([',. -][a-zA-Z0-9 ])?[a-zA-Z0-9]*)*$"
                   required
                 />
                 <div class="invalid-feedback">Це поле обов'язкове</div>
@@ -156,8 +119,9 @@
                   type="text"
                   class="form-control"
                   name="userComment"
-                  required
                   id="userComment"
+                  aria-required="true"
+                  required
                 ></textarea>
                 <div class="invalid-feedback">
                   Це поле обов'язкове
@@ -205,6 +169,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../../common/js/index.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
